@@ -23,10 +23,10 @@ export default function Home() {
             <div style={{ width: 200}}>
                 <GenreList onSelectGenre={onSelectGenre} />
             </div>
-            <div style={{ flex: 1}}></div>
+            <div style={{ flex: 1}}>
                 <BookList books={books} />
                 <AddBookForm onAdded={onAdded} />
             </div>
-        </div>>
-    )
+        </div>
+    );
 }
