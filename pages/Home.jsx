@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GenreList from '../components/GenreList.jsx';
 import BookList from '../components/BookList.jsx';
 import AddBookForm from '../components/AddBookForm.jsx';
+import AddUsrForm from '../components/AddUsrForm.jsx';
 import { getBooks, getBooksByGenre } from '../api/api.js';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <div style={{ display: 'flex', gap: '2rem',}}>
             <div style={{ width: 200}}>
                 <GenreList onSelectGenre={onSelectGenre} />
+                <AddUsrForm />
             </div>
             <div style={{ flex: 1}}>
                 <BookList books={books} />
