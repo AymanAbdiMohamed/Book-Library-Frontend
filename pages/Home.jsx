@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GenreList from '../components/GenreList.jsx';
 import BookList from '../components/BookList.jsx';
 import AddBookForm from '../components/AddBookForm.jsx';
-import AddUsrForm from '../components/AddUsrForm.jsx';
+import AddUsrForm from '../components/AddUserForm.jsx';
 import { getBooks, getBooksByGenre } from '../api/api.js';
 
 export default function Home() {
