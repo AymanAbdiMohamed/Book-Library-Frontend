@@ -40,3 +40,24 @@ export async function createBook(data) {
     });
     return res.json();
 }
+
+//  Users
+//  Create a new user
+export async function createUser(data) {
+    const res = await fetch(`${API}/users/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+    });
+    return res.json();
+}
+
+// borrow a book (expects: { user_id, book_id })
+export async function borrowBook(data) {
+    const res = await fetch(`${API}/borrow/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+    });
+    return res.json();
+}
