@@ -10,7 +10,7 @@ export async function getGenres() {
 //  Genres API
 //  create a new genre (expects: { name: "GenreName" })
 export async function createGenre(data) {
-    const res = aait fetch(`${API}/genres/`, {
+    const res = await fetch(`${API}/genres/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
