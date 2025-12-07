@@ -9,11 +9,11 @@ export default function Home() {
 
 
     useEffect(() => {
-        getBooks().then(data => setBooks(data.books));
+        getBooks().then(data => setBooks(Array.isArray(data) ? data : data.books || []));
     }, []);
 
     function onSelectGenre(id) {
-        getBooksByGenre(id).then(data => setBooks(data.books));
+        getBooksByGenre(id).then(data => setBooks(Array.isArray(data) ? data : data.books || []));
     }
     function onAdded(book) {
         setBooks((prev) => [...prev, book]);

@@ -21,7 +21,7 @@ export async function createGenre(data) {
 // Books API
 // fetch all books
 export async function getBooks() {
-    const res = await fetch(`$API}/books/`);
+    const res = await fetch(`${API}/books/`);
     return res.json();
 }
 
