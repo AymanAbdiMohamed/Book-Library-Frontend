@@ -7,7 +7,7 @@ export default function BookList({ books }) {
             <ul>
                 {books.map((book) => (
                     <li key={book.id}>
-                        {book.title} - {book.author} {b.pages ? `(${b.pages} pages)` : ''}
+                        {book.title} - {book.author} {book.pages ? `(${book.pages} pages)` : ''}
                     </li>
                 ))}
             </ul>
